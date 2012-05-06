@@ -1,0 +1,89 @@
+{
+   "abstract" : "A minimalistic deploy tool",
+   "author" : [
+      "Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.112150",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Cinnamon",
+   "no_index" : {
+      "directory" : [
+         "inc"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : "0.98",
+            "Test::Requires" : 0
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.38"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Class::Load" : 0,
+            "Coro" : 0,
+            "IPC::Run" : 0,
+            "Log::Dispatch" : 0,
+            "Net::OpenSSH" : 0,
+            "Term::ANSIColor" : 0,
+            "Term::ReadKey" : 0,
+            "parent" : 0,
+            "perl" : "5.014002"
+         }
+      }
+   },
+   "provides" : {
+      "Cinnamon" : {
+         "file" : "lib/Cinnamon.pm",
+         "version" : "0.01"
+      },
+      "Cinnamon::Config" : {
+         "file" : "lib/Cinnamon/Config.pm",
+         "version" : 0
+      },
+      "Cinnamon::Config::Loader" : {
+         "file" : "lib/Cinnamon/Config/Loader.pm",
+         "version" : 0
+      },
+      "Cinnamon::DSL" : {
+         "file" : "lib/Cinnamon/DSL.pm",
+         "version" : 0
+      },
+      "Cinnamon::Local" : {
+         "file" : "lib/Cinnamon/Local.pm",
+         "version" : 0
+      },
+      "Cinnamon::Logger" : {
+         "file" : "lib/Cinnamon/Logger.pm",
+         "version" : 0
+      },
+      "Cinnamon::Remote" : {
+         "file" : "lib/Cinnamon/Remote.pm",
+         "version" : 0
+      },
+      "Cinnamon::Runner" : {
+         "file" : "lib/Cinnamon/Runner.pm",
+         "version" : 0
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "X_prepan" : {
+         "author_url" : "http://prepan.org/user/xxxxxxx",
+         "module_url" : "http://prepan.org/module/xxxxx"
+      }
+   },
+   "version" : "0.01"
+}
