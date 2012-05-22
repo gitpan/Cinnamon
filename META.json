@@ -4,7 +4,7 @@
       "Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.112621",
    "license" : [
       "perl_5"
    ],
@@ -40,14 +40,14 @@
             "Term::ANSIColor" : 0,
             "Term::ReadKey" : 0,
             "parent" : 0,
-            "perl" : "5.014002"
+            "perl" : "5.008009"
          }
       }
    },
    "provides" : {
       "Cinnamon" : {
          "file" : "lib/Cinnamon.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       },
       "Cinnamon::Config" : {
          "file" : "lib/Cinnamon/Config.pm",
@@ -85,5 +85,5 @@
          "module_url" : "http://prepan.org/module/xxxxx"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
