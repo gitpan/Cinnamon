@@ -1,9 +1,9 @@
 package Cinnamon;
 use strict;
 use warnings;
-use 5.008008;
+use 5.010_001;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Class::Load ();
 
@@ -11,16 +11,30 @@ use Cinnamon::Config;
 use Cinnamon::Runner;
 use Cinnamon::Logger;
 
+sub new {
+    my $class = shift;
+    bless { }, $class;
+}
+
 sub run {
-    my $class  = shift;
-    my @args   = Cinnamon::Config::load @_;
-    my $hosts  = Cinnamon::Config::get_role || [];
-    my $task   = Cinnamon::Config::get_task;
-    my $runner = Cinnamon::Config::get('runner_class') || 'Cinnamon::Runner';
+    my ($self, $role, $task, %opts)  = @_;
+    my @args     = Cinnamon::Config::load $role, $task, %opts;
+    my $hosts    = Cinnamon::Config::get_role;
+    my $task_def = Cinnamon::Config::get_task;
+    my $runner   = Cinnamon::Config::get('runner_class') || 'Cinnamon::Runner';
+
+    unless (defined $hosts) {
+        log 'error', "undefined role : '$role'";
+        return;
+    }
+    unless (defined $task_def) {
+        log 'error', "undefined task : '$task'";
+        return;
+    }
 
     Class::Load::load_class $runner;
 
-    my $result = $runner->start($hosts, $task, @args);
+    my $result = $runner->start($hosts, $task_def, @args);
     my (@success, @error);
 
     for my $key (keys %{$result || {}}) {
@@ -32,9 +46,13 @@ sub run {
         }
     }
 
-    log info => sprintf(
-        "\n========================\n[success]: %s\n[error]: %s",
+    log success => sprintf(
+        "\n========================\n[success]: %s",
         (join(', ', @success) || ''),
+    );
+
+    log error => sprintf(
+        "[error]: %s",
         (join(', ', @error)   || ''),
     );
 }

@@ -3,12 +3,14 @@ abstract: 'A minimalistic deploy tool'
 author:
   - 'Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>'
 build_requires:
-  Test::More: 0.98
-  Test::Requires: 0
+  Capture::Tiny: 0
+  Directory::Scratch: 0
+  Test::Class: 0
+  Test::More: 0
 configure_requires:
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.112621'
+generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.112150'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,7 +22,10 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.02
+    version: 0.03
+  Cinnamon::CLI:
+    file: lib/Cinnamon/CLI.pm
+    version: 0
   Cinnamon::Config:
     file: lib/Cinnamon/Config.pm
     version: 0
@@ -43,17 +48,19 @@ provides:
     file: lib/Cinnamon/Runner.pm
     version: 0
 requires:
+  AnyEvent: 0
   Class::Load: 0
-  Coro: 0
+  Getopt::Long::Parser: 0
   IPC::Run: 0
   Log::Dispatch: 0
   Net::OpenSSH: 0
+  POSIX: 0
   Term::ANSIColor: 0
   Term::ReadKey: 0
   parent: 0
-  perl: 5.008009
+  perl: 5.014002
 resources:
   X_prepan:
     author_url: http://prepan.org/user/xxxxxxx
     module_url: http://prepan.org/module/xxxxx
-version: 0.02
+version: 0.03
