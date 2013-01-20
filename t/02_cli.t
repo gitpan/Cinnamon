@@ -6,7 +6,6 @@ use lib file(__FILE__)->dir->file('lib')->stringify;
 
 use base qw(Test::Class);
 
-
 use Test::Cinnamon::CLI;
 
 sub _help : Tests {
@@ -49,6 +48,18 @@ CONFIG
     like $app->system_output, qr{app};
 }
 
-__PACKAGE__->runtests;
+sub _read_command_line_args : Tests {
+    my $app = Test::Cinnamon::CLI::cli();
+    $app->dir->touch("config/deploy.pl", <<'CONFIG');
+use Cinnamon::DSL;
+role test => 'localhost';
+task args => sub {
+    my $host  = shift;
+    printf "%s\t%s\n", get('args1'), get('args2');
+};
+CONFIG
+    $app->run('test', 'args', '-s', 'args1=foo', '-s', 'args2=bar');
+    like $app->system_output, qr{foo\tbar};
+}
 
-1;
+__PACKAGE__->runtests;

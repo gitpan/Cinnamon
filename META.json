@@ -1,10 +1,10 @@
 {
    "abstract" : "A minimalistic deploy tool",
    "author" : [
-      "Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>"
+      "unknown"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],
@@ -36,7 +36,7 @@
          "requires" : {
             "AnyEvent" : 0,
             "Class::Load" : 0,
-            "Getopt::Long::Parser" : 0,
+            "Getopt::Long" : 0,
             "IPC::Run" : 0,
             "Log::Dispatch" : 0,
             "Net::OpenSSH" : 0,
@@ -51,7 +51,7 @@
    "provides" : {
       "Cinnamon" : {
          "file" : "lib/Cinnamon.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Cinnamon::CLI" : {
          "file" : "lib/Cinnamon/CLI.pm",
@@ -67,6 +67,10 @@
       },
       "Cinnamon::DSL" : {
          "file" : "lib/Cinnamon/DSL.pm",
+         "version" : 0
+      },
+      "Cinnamon::HandleManager" : {
+         "file" : "lib/Cinnamon/HandleManager.pm",
          "version" : 0
       },
       "Cinnamon::Local" : {
@@ -93,5 +97,5 @@
          "module_url" : "http://prepan.org/module/xxxxx"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }

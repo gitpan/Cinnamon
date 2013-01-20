@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use 5.010_001;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Class::Load ();
 
@@ -34,7 +34,7 @@ sub run {
 
     Class::Load::load_class $runner;
 
-    my $result = $runner->start($hosts, $task_def, @args);
+    my $result = $runner->start($hosts, $task_def);
     my (@success, @error);
 
     for my $key (keys %{$result || {}}) {
@@ -323,15 +323,27 @@ https://github.com/kentaro/cinnamon
 
 =head1 AUTHOR
 
-Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>
+=over 4
 
-Yuki Shibazaki E<lt>shibayu36 at gmail.comE<gt>
+=item * Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>
+
+=item * Yuki Shibazaki E<lt>shibayu36 at gmail.comE<gt>
+
+=back
 
 =head1 SEE ALSO
 
-L<capistrano>
+=over 4
 
-L<Archer>
+=item * Tutorial (Japanese)
+
+L<http://d.hatena.ne.jp/naoya/20130118/1358477523>
+
+=item * L<capistrano>
+
+=item * L<Archer>
+
+=back
 
 =head1 LICENSE
 

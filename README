@@ -212,14 +212,18 @@ REPOSITORY
     https://github.com/kentaro/cinnamon
 
 AUTHOR
-    Kentaro Kuribayashi <kentarok@gmail.com>
+    *   Kentaro Kuribayashi <kentarok@gmail.com>
 
-    Yuki Shibazaki <shibayu36 at gmail.com>
+    *   Yuki Shibazaki <shibayu36 at gmail.com>
 
 SEE ALSO
-    capistrano
+    *   Tutorial (Japanese)
 
-    Archer
+        <http://d.hatena.ne.jp/naoya/20130118/1358477523>
+
+    *   capistrano
+
+    *   Archer
 
 LICENSE
     Copyright (C) Kentaro Kuribayashi
