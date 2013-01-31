@@ -3,8 +3,9 @@ use strict;
 use warnings;
 use 5.010_001;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
+use YAML ();
 use Class::Load ();
 
 use Cinnamon::Config;
@@ -19,6 +20,12 @@ sub new {
 sub run {
     my ($self, $role, $task, %opts)  = @_;
     my @args     = Cinnamon::Config::load $role, $task, %opts;
+
+    if ($opts{info}) {
+        log 'info', YAML::Dump(Cinnamon::Config::info);
+        return;
+    }
+
     my $hosts    = Cinnamon::Config::get_role;
     my $task_def = Cinnamon::Config::get_task;
     my $runner   = Cinnamon::Config::get('runner_class') || 'Cinnamon::Runner';

@@ -22,7 +22,7 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.04
+    version: 0.05
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
     version: 0
@@ -60,10 +60,11 @@ requires:
   POSIX: 0
   Term::ANSIColor: 0
   Term::ReadKey: 0
+  YAML: 0
   parent: 0
   perl: 5.014002
 resources:
   X_prepan:
     author_url: http://prepan.org/user/xxxxxxx
     module_url: http://prepan.org/module/xxxxx
-version: 0.04
+version: 0.05
