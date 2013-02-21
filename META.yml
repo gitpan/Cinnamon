@@ -1,12 +1,14 @@
 ---
 abstract: 'A minimalistic deploy tool'
 author:
-  - unknown
+  - 'Yuki Shibazaki <shibayu36@gmail.com>'
+  - 'Kentaro Kuribayashi kentarok@gmail.com'
 build_requires:
   Capture::Tiny: 0
   Directory::Scratch: 0
   Test::Class: 0
-  Test::More: 0
+  Test::More: 0.98
+  Test::Requires: 0
 configure_requires:
   Module::Build: 0.38
 dynamic_config: 0
@@ -22,7 +24,7 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.05
+    version: 0.06
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
     version: 0
@@ -64,7 +66,5 @@ requires:
   parent: 0
   perl: 5.014002
 resources:
-  X_prepan:
-    author_url: http://prepan.org/user/xxxxxxx
-    module_url: http://prepan.org/module/xxxxx
-version: 0.05
+  license: http://dev.perl.org/licenses/
+version: 0.06

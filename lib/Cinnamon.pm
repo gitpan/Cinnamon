@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use 5.010_001;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 use YAML ();
 use Class::Load ();
@@ -62,6 +62,8 @@ sub run {
         "[error]: %s",
         (join(', ', @error)   || ''),
     );
+
+    return (\@success, \@error);
 }
 
 !!1;
