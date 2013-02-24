@@ -5,6 +5,7 @@ author:
   - 'Kentaro Kuribayashi kentarok@gmail.com'
 build_requires:
   Capture::Tiny: 0
+  Cwd::Guard: 0
   Directory::Scratch: 0
   Test::Class: 0
   Test::More: 0.98
@@ -24,7 +25,7 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.06
+    version: 0.07
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
     version: 0
@@ -67,4 +68,4 @@ requires:
   perl: 5.014002
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.06
+version: 0.07
