@@ -191,7 +191,7 @@ DSLs
    sudo ( *@command: Array* ): ( *$stdout: String*, *$stderr: String* )
           my ($stdout, $stdout) = sudo '/path/to/httpd', 'restart';
 
-        Execultes a command as well, but under *suod* environment.
+        Executes a command as well, but under *sudo* environment.
 
    remote ( *$sub: CODE* *$host: String* ): Any
           my ($stdout, $stdout) = remote {
