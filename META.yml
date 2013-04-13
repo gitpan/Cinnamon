@@ -13,7 +13,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,37 +25,31 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.12
+    version: 0.13_01
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
-    version: 0
   Cinnamon::Config:
     file: lib/Cinnamon/Config.pm
-    version: 0
   Cinnamon::Config::Loader:
     file: lib/Cinnamon/Config/Loader.pm
-    version: 0
   Cinnamon::DSL:
     file: lib/Cinnamon/DSL.pm
-    version: 0
   Cinnamon::HandleManager:
     file: lib/Cinnamon/HandleManager.pm
-    version: 0
   Cinnamon::Local:
     file: lib/Cinnamon/Local.pm
-    version: 0
   Cinnamon::Logger:
     file: lib/Cinnamon/Logger.pm
-    version: 0
   Cinnamon::Remote:
     file: lib/Cinnamon/Remote.pm
-    version: 0
   Cinnamon::Runner:
     file: lib/Cinnamon/Runner.pm
-    version: 0
+  Cinnamon::Runner::Concurrent:
+    file: lib/Cinnamon/Runner/Concurrent.pm
 requires:
   AnyEvent: 0
   Class::Load: 0
+  Coro: 0
   Getopt::Long: 0
   IPC::Run: 0
   Log::Dispatch: 0
@@ -68,4 +62,4 @@ requires:
   perl: 5.014002
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.12
+version: 0.13_01

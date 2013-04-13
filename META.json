@@ -5,7 +5,7 @@
       "Kentaro Kuribayashi kentarok@gmail.com"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.130880",
    "license" : [
       "perl_5"
    ],
@@ -22,12 +22,12 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Capture::Tiny" : 0,
-            "Cwd::Guard" : 0,
-            "Directory::Scratch" : 0,
-            "Test::Class" : 0,
+            "Capture::Tiny" : "0",
+            "Cwd::Guard" : "0",
+            "Directory::Scratch" : "0",
+            "Test::Class" : "0",
             "Test::More" : "0.98",
-            "Test::Requires" : 0
+            "Test::Requires" : "0"
          }
       },
       "configure" : {
@@ -37,17 +37,18 @@
       },
       "runtime" : {
          "requires" : {
-            "AnyEvent" : 0,
-            "Class::Load" : 0,
-            "Getopt::Long" : 0,
-            "IPC::Run" : 0,
-            "Log::Dispatch" : 0,
-            "Net::OpenSSH" : 0,
-            "POSIX" : 0,
-            "Term::ANSIColor" : 0,
-            "Term::ReadKey" : 0,
-            "YAML" : 0,
-            "parent" : 0,
+            "AnyEvent" : "0",
+            "Class::Load" : "0",
+            "Coro" : "0",
+            "Getopt::Long" : "0",
+            "IPC::Run" : "0",
+            "Log::Dispatch" : "0",
+            "Net::OpenSSH" : "0",
+            "POSIX" : "0",
+            "Term::ANSIColor" : "0",
+            "Term::ReadKey" : "0",
+            "YAML" : "0",
+            "parent" : "0",
             "perl" : "5.014002"
          }
       }
@@ -55,50 +56,44 @@
    "provides" : {
       "Cinnamon" : {
          "file" : "lib/Cinnamon.pm",
-         "version" : "0.12"
+         "version" : "0.13_01"
       },
       "Cinnamon::CLI" : {
-         "file" : "lib/Cinnamon/CLI.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/CLI.pm"
       },
       "Cinnamon::Config" : {
-         "file" : "lib/Cinnamon/Config.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/Config.pm"
       },
       "Cinnamon::Config::Loader" : {
-         "file" : "lib/Cinnamon/Config/Loader.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/Config/Loader.pm"
       },
       "Cinnamon::DSL" : {
-         "file" : "lib/Cinnamon/DSL.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/DSL.pm"
       },
       "Cinnamon::HandleManager" : {
-         "file" : "lib/Cinnamon/HandleManager.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/HandleManager.pm"
       },
       "Cinnamon::Local" : {
-         "file" : "lib/Cinnamon/Local.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/Local.pm"
       },
       "Cinnamon::Logger" : {
-         "file" : "lib/Cinnamon/Logger.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/Logger.pm"
       },
       "Cinnamon::Remote" : {
-         "file" : "lib/Cinnamon/Remote.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/Remote.pm"
       },
       "Cinnamon::Runner" : {
-         "file" : "lib/Cinnamon/Runner.pm",
-         "version" : 0
+         "file" : "lib/Cinnamon/Runner.pm"
+      },
+      "Cinnamon::Runner::Concurrent" : {
+         "file" : "lib/Cinnamon/Runner/Concurrent.pm"
       }
    },
-   "release_status" : "stable",
+   "release_status" : "testing",
    "resources" : {
       "license" : [
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.12"
+   "version" : "0.13_01"
 }

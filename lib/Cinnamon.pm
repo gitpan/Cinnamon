@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use 5.010_001;
 
-our $VERSION = '0.12';
+our $VERSION = '0.13_01';
 
 use YAML ();
 use Class::Load ();
@@ -28,7 +28,7 @@ sub run {
 
     my $hosts    = Cinnamon::Config::get_role;
     my $task_def = Cinnamon::Config::get_task;
-    my $runner   = Cinnamon::Config::get('runner_class') || 'Cinnamon::Runner';
+    my $runner   = Cinnamon::Config::get('runner_class') || 'Cinnamon::Runner::Concurrent';
 
     unless (defined $hosts) {
         log 'error', "undefined role : '$role'";
