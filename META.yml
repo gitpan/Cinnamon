@@ -25,7 +25,7 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.13_01
+    version: 0.13_02
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
   Cinnamon::Config:
@@ -62,4 +62,4 @@ requires:
   perl: 5.014002
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.13_01
+version: 0.13_02

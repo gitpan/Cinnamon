@@ -56,7 +56,7 @@
    "provides" : {
       "Cinnamon" : {
          "file" : "lib/Cinnamon.pm",
-         "version" : "0.13_01"
+         "version" : "0.13_02"
       },
       "Cinnamon::CLI" : {
          "file" : "lib/Cinnamon/CLI.pm"
@@ -95,5 +95,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.13_01"
+   "version" : "0.13_02"
 }
