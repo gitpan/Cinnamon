@@ -1,8 +1,7 @@
 ---
 abstract: 'A minimalistic deploy tool'
 author:
-  - 'Yuki Shibazaki <shibayu36@gmail.com>'
-  - 'Kentaro Kuribayashi kentarok@gmail.com'
+  - '=over 4'
 build_requires:
   Capture::Tiny: 0
   Cwd::Guard: 0
@@ -11,9 +10,11 @@ build_requires:
   Test::More: 0.98
   Test::Requires: 0
 configure_requires:
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.130880'
+generated_by: 'Minilla/v0.0.53, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,11 +22,16 @@ meta-spec:
 name: Cinnamon
 no_index:
   directory:
+    - t
+    - xt
     - inc
+    - share
+    - eg
+    - examples
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.20
+    version: 0.21
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
   Cinnamon::Config:
@@ -59,5 +65,14 @@ requires:
   parent: 0
   perl: 5.014002
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.20
+  bugtracker: https://github.com/kentaro/cinnamon/issues
+  homepage: https://github.com/kentaro/cinnamon
+  repository: git://github.com/kentaro/cinnamon.git
+version: 0.21
+x_contributors:
+  - 'wakabatan <wakabatan@localhost.localdomain>'
+  - 'hatyuki <hatyuki29@gmail.com>'
+  - 'Syohei YOSHIDA <syohex@gmail.com>'
+  - 'hayajo <hayajo@cpan.org>'
+  - 'Kentaro Kuribayashi <kentarok@gmail.com>'
+  - 'shibayu36 <shibayu36@gmail.com>'
