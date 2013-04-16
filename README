@@ -208,6 +208,22 @@ DSLs
         Remote login username is retrieved by "get 'user'" or `whoami`
         command. Set appropriate username in advance if needed.
 
+  Configuration Variables
+    Cinnamon configuration is managed by set function. You can customize
+    following variables.
+
+   user
+    user name which is used for login to server.
+
+   concurrency
+    Max number of concurrent execution of tasks. the task which is not
+    specified concurrency, is executed in parallel by all the hosts.
+
+            set concurrency => {
+                restart        => 1,
+                'server:setup' => 2,
+            };
+
 REPOSITORY
     https://github.com/kentaro/cinnamon
 
@@ -230,4 +246,11 @@ LICENSE
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
+
+POD ERRORS
+    Hey! The above document had some coding errors, which are explained
+    below:
+
+    Around line 327:
+        You forgot a '=back' before '=head2'
 
