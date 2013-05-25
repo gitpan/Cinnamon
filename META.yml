@@ -14,7 +14,7 @@ configure_requires:
   CPAN::Meta::Prereqs: 0
   Module::Build: 0.38
 dynamic_config: 0
-generated_by: 'Minilla/v0.0.53, CPAN::Meta::Converter version 2.130880'
+generated_by: 'Minilla/v0.0.54, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -28,10 +28,11 @@ no_index:
     - share
     - eg
     - examples
+    - author
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.21
+    version: 0.22
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
   Cinnamon::Config:
@@ -68,11 +69,12 @@ resources:
   bugtracker: https://github.com/kentaro/cinnamon/issues
   homepage: https://github.com/kentaro/cinnamon
   repository: git://github.com/kentaro/cinnamon.git
-version: 0.21
+version: 0.22
 x_contributors:
   - 'wakabatan <wakabatan@localhost.localdomain>'
   - 'hatyuki <hatyuki29@gmail.com>'
   - 'Syohei YOSHIDA <syohex@gmail.com>'
   - 'hayajo <hayajo@cpan.org>'
   - 'Kentaro Kuribayashi <kentarok@gmail.com>'
-  - 'shibayu36 <shibayu36@gmail.com>'
+  - 'TERAOKA Yoshinori <yteraoka@me.com>'
+  - 'shiba_yu36 <shibayu36@gmail.com>'
