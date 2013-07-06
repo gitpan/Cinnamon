@@ -23,9 +23,9 @@ my %args = (
         'Module::Build' => 0.38,
     },
 
-    no_index    => { 'directory' => [ 'inc' ] },
-    name        => 'Cinnamon',
-    module_name => 'Cinnamon',
+    name            => 'Cinnamon',
+    module_name     => 'Cinnamon',
+    allow_pureperl => 0,
 
     script_files => [glob('script/*'), glob('bin/*')],
 
