@@ -71,7 +71,7 @@
    "provides" : {
       "Cinnamon" : {
          "file" : "lib/Cinnamon.pm",
-         "version" : "0.24"
+         "version" : "0.25"
       },
       "Cinnamon::CLI" : {
          "file" : "lib/Cinnamon/CLI.pm"
@@ -118,7 +118,7 @@
          "web" : "https://github.com/kentaro/cinnamon"
       }
    },
-   "version" : "0.24",
+   "version" : "0.25",
    "x_contributors" : [
       "wakabatan <wakabatan@localhost.localdomain>",
       "hatyuki <hatyuki29@gmail.com>",
