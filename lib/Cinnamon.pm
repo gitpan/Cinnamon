@@ -5,7 +5,7 @@ use 5.010_001;
 
 use parent qw(Exporter);
 
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 our @EXPORT = qw(CTX);
 sub CTX { $Cinnamon::Context::CTX };
@@ -83,6 +83,13 @@ Cinnamon - A minimalistic deploy tool
           my ($host) = @_;
           # ...
       },
+  };
+
+  # You can call other tasks
+  task deploy => sub {
+    my ($host) = @_;
+    call "update", $host;
+    call "restart", $host;
   };
 
 =head1 WARNINGS
@@ -257,6 +264,20 @@ whereas done on localhost without it.
 
 Remote login username is retrieved by C<get 'user'> or C<`whoami`>
 command. Set appropriate username in advance if needed.
+
+=head3 call ( I<$task_name: String>, I<$host: String> )
+
+=over 4
+
+  task deploy => sub {
+    my ($host) = @_;
+    call "update", $host;
+    call "web:restart", $host;
+  };
+
+=back
+
+Call other tasks in a task code.
 
 =head2 Configuration Variables
 
