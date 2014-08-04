@@ -3,24 +3,22 @@ abstract: 'A minimalistic deploy tool'
 author:
   - '=over 4'
 build_requires:
-  Capture::Tiny: 0
-  Cwd::Guard: 0
-  Directory::Scratch: 0
-  Test::Class: 0
-  Test::Fatal: 0
-  Test::Mock::Guard: 0
-  Test::More: 0.98
-  Test::Requires: 0
+  Capture::Tiny: '0'
+  Cwd::Guard: '0'
+  Directory::Scratch: '0'
+  Test::Class: '0'
+  Test::Fatal: '0'
+  Test::Mock::Guard: '0'
+  Test::More: '0.98'
+  Test::Requires: '0'
 configure_requires:
-  CPAN::Meta: 0
-  CPAN::Meta::Prereqs: 0
-  Module::Build: 0.38
+  Module::Build: '0.38'
 dynamic_config: 0
-generated_by: 'Minilla/v0.7.5, CPAN::Meta::Converter version 2.132830'
+generated_by: 'Minilla/v2.1.1, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Cinnamon
 no_index:
   directory:
@@ -35,7 +33,7 @@ no_index:
 provides:
   Cinnamon:
     file: lib/Cinnamon.pm
-    version: 0.26
+    version: '0.27'
   Cinnamon::CLI:
     file: lib/Cinnamon/CLI.pm
   Cinnamon::Config::Loader:
@@ -59,26 +57,26 @@ provides:
   Cinnamon::Task:
     file: lib/Cinnamon/Task.pm
 requires:
-  AnyEvent: 0
-  Class::Load: 0
-  Coro: 0
-  Getopt::Long: 0
-  Hash::MultiValue: 0
-  IPC::Run: 0
-  Log::Dispatch: 0
-  Moo: 0
-  Net::OpenSSH: 0
-  POSIX: 0
-  Term::ANSIColor: 0
-  Term::ReadKey: 0
-  YAML: 0
-  parent: 0
-  perl: 5.014002
+  AnyEvent: '0'
+  Class::Load: '0'
+  Coro: '0'
+  Getopt::Long: '0'
+  Hash::MultiValue: '0'
+  IPC::Run: '0'
+  Log::Dispatch: '0'
+  Moo: '0'
+  Net::OpenSSH: '0'
+  POSIX: '0'
+  Term::ANSIColor: '0'
+  Term::ReadKey: '0'
+  YAML: '0'
+  parent: '0'
+  perl: '5.014002'
 resources:
   bugtracker: https://github.com/kentaro/cinnamon/issues
   homepage: https://github.com/kentaro/cinnamon
   repository: git://github.com/kentaro/cinnamon.git
-version: 0.26
+version: '0.27'
 x_contributors:
   - 'wakabatan <wakabatan@localhost.localdomain>'
   - 'hatyuki <hatyuki29@gmail.com>'
@@ -87,4 +85,5 @@ x_contributors:
   - 'Kentaro Kuribayashi <kentarok@gmail.com>'
   - 'TERAOKA Yoshinori <yteraoka@me.com>'
   - 'mechairoi <ttsujikawa@gmail.com>'
+  - 'punytan <punytan@gmail.com>'
   - 'shibayu36 <shibayu36@gmail.com>'
